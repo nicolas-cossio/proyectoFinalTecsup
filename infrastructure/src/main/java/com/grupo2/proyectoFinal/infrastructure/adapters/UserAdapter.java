@@ -7,7 +7,7 @@ import com.grupo2.proyectoFinal.domain.ports.out.UserServiceOut;
 public class UserAdapter implements UserServiceOut {
 
     @Override
-    public UserDto crearUserOut(UserRequest requestPersona) {
+    public UserDto createUserOut(UserRequest requestPersona) {
         return null;
     }
 }

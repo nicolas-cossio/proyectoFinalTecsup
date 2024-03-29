@@ -5,22 +5,30 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
-@Table(name = "courses")
 @Entity
+@Table(name = "modules")
 @Getter
 @Setter
-public class Course {
+public class ModuleEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
     private String name;
-    private String description;
     @Column(nullable = false)
-    private Float price;
-    private Integer duration;
+    private String description;
+    @Column(name="initialdate", nullable = false)
+    private Date initialDate;
+    @Column(name="finaldate", nullable = false)
+    private Date finalDate;
+
+    @ManyToOne
+    @JoinColumn(name = "id_course", nullable = false)
+    private CourseEntity courseEntity;
 
     // Audit columns
     @Column(nullable = false)
@@ -43,9 +51,4 @@ public class Course {
 
     @Column(name = "date_delet")
     private Timestamp dateDelet;
-
-    @ManyToOne
-    @JoinColumn(name = "id_difficulty")
-    private DifficultyLevel difficultyLevel;
-
 }

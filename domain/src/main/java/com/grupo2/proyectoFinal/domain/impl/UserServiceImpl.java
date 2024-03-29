@@ -13,7 +13,7 @@ public class UserServiceImpl implements UserServiceIn {
     private final UserServiceOut userServiceOut;
 
     @Override
-    public UserDto crearUserIn(UserRequest requestPersona) {
-        return userServiceOut.crearUserOut(requestPersona);
+    public UserDto createUserIn(UserRequest requestPersona) {
+        return userServiceOut.createUserOut(requestPersona);
     }
 }

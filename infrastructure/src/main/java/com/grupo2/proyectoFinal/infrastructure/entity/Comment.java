@@ -49,5 +49,5 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "id_course")
-    private Course course;
+    private CourseEntity courseEntity;
 }

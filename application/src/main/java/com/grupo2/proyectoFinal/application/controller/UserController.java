@@ -18,9 +18,9 @@ public class UserController {
     private final UserServiceIn userServiceIn;
 
     @PostMapping
-    public ResponseEntity<UserDto> registrar(@RequestBody UserRequest requestPersona) {
+    public ResponseEntity<UserDto> register(@RequestBody UserRequest requestPersona) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(userServiceIn.crearUserIn(requestPersona));
+                .body(userServiceIn.createUserIn(requestPersona));
     }
 }

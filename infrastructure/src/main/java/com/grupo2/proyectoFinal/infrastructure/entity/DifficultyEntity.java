@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 @Entity
 @Getter
 @Setter
-public class DifficultyLevel {
+public class DifficultyEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
